@@ -1,0 +1,39 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.bg-pri {
+    background-color: #3d99ad;
+}
+
+.bg-sec {
+    background-color: #e9edf6;
+}
+
+.hero {
+    background: linear-gradient(135deg, #3d99ad 0%, #70c1b3 100%);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.section-title {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: #0d6efd;
+}
+
+footer {
+    background: #0d6efd;
+    color: white;
+    padding: 40px 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+}
