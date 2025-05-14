@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-pri">
@@ -42,10 +44,13 @@
       <h2>About Us</h2>
       <p>
         ConversoAI is a cutting-edge AI-as-a-Service platform, revolutionizing booking systems across industries.
-        We empower businesses with bespoke conversational AI, trained on your unique data and deployed securely within your infrastructure.
+        We empower businesses with bespoke conversational AI, trained on your unique data and deployed securely within
+        your infrastructure.
         Whether you're in travel, events, hospitality, or beyond, ConversoAI transforms customer interactions.
-        Our intelligent bots use advanced fine-tuning techniques, leveraging your API documentation and help resources to understand and respond to user queries with unparalleled accuracy.
-        Experience the future of bookings, where users interact in natural conversations, receive instant booking confirmations, and enjoy seamless payment processing through secure iframes.
+        Our intelligent bots use advanced fine-tuning techniques, leveraging your API documentation and help resources
+        to understand and respond to user queries with unparalleled accuracy.
+        Experience the future of bookings, where users interact in natural conversations, receive instant booking
+        confirmations, and enjoy seamless payment processing through secure iframes.
       </p>
     </div>
   </section>
@@ -75,7 +80,8 @@
           <div class="text-center">
             <div class="feature-icon mb-3">⚡</div>
             <h5>Ease of Use</h5>
-            <p>ConversoAI simplifies the booking process with an intuitive chat interface, making it effortless for users.</p>
+            <p>ConversoAI simplifies the booking process with an intuitive chat interface, making it effortless for
+              users.</p>
           </div>
         </div>
       </div>
@@ -91,27 +97,29 @@
       <div class="row mt-4">
         <div class="col-md-8 offset-md-2 text-center">
           <p>
-            ConversoAI not only streamlines bookings but also enhances customer interactions. By providing personalized suggestions and instant support, we help you understand your customers better, leading to increased satisfaction, reduced call volume, and stronger customer loyalty.
+            ConversoAI not only streamlines bookings but also enhances customer interactions. By providing personalized
+            suggestions and instant support, we help you understand your customers better, leading to increased
+            satisfaction, reduced call volume, and stronger customer loyalty.
           </p>
-          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-    <section id="contact" class="bg-sec py-5">
-      <div class="container">
-          <div class="section-title text-center">
-              <h2>Get in Touch</h2>
-              <p>Whether you need support or want to discuss your booking needs, we're here to help.</p>
-          </div>
-          <form class="contact-form mx-auto" style="max-width: 600px;">
-              <input type="text" class="form-control mb-3" placeholder="Your Name" required>
-              <input type="email" class="form-control mb-3" placeholder="Your Email" required>
-              <textarea class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
-              <button type="submit" class="btn btn-primary w-100">Send Message</button>
-          </form>
+  <section id="contact" class="bg-sec py-5">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Get in Touch</h2>
+        <p>Whether you need support or want to discuss your booking needs, we're here to help.</p>
       </div>
+      <form class="contact-form mx-auto" style="max-width: 600px;">
+        <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+        <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+        <textarea class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -119,39 +127,27 @@
     <p>&copy; 2025 ConversoAI. Smart AI for Secure Booking Platforms.</p>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery for form handling -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  
-  <script>
-    (function () {
-      emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your actual User ID
-    })();
+  <div class="toast-container position-fixed top-0 end-0 p-3">
+    <div id="successToast" class="toast align-items-center text-white bg-success border-0" role="alert"
+      aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">Message sent successfully!</div><button type="button"
+          class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+    <div id="failureToast" class="toast align-items-center text-white bg-danger border-0" role="alert"
+      aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">Failed to send message. Please try again.</div><button type="button"
+          class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
 
-    document.querySelector('.contact-form').addEventListener('submit', function (event) {
-      event.preventDefault();
+    </script>
 
-      const name = document.querySelector('input[placeholder="Your Name"]').value;
-      const email = document.querySelector('input[placeholder="Your Email"]').value;
-      const message = document.querySelector('textarea[placeholder="Your Message"]').value;
-
-      const formData = {
-        name: name,
-        email: email,
-        message: message
-      };
-
-      emailjs.send("YOUR_EMAILJS_SERVICE_ID", "YOUR_EMAILJS_TEMPLATE_ID", formData) // Replace with your Service ID and Template ID
-        .then(function (response) {
-          console.log('SUCCESS!', response.status, response.text);
-          alert('Message sent successfully!');
-          document.querySelector('.contact-form').reset();
-        }, function (error) {
-          console.log('FAILED...', error);
-          alert('Failed to send message. Please try again.');
-        });
-    });
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
