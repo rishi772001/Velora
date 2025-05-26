@@ -1,0 +1,10 @@
+{
+  "chat": {
+    "cosmos_profiles": [
+      "dpe_search"
+    ]
+  },
+  "completion": {
+    "profile": "default-code_completion-gemini"
+  }
+}
